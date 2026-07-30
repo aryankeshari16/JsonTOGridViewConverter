@@ -30,14 +30,6 @@ namespace JsonTOGridViewConverter
             DataTable table =
                 Newtonsoft.Json.JsonConvert.DeserializeObject<DataTable>(jsonData);
             dataGridView1.DataSource = table;
-            //foreach (DataRow row in table.Rows)
-            //{
-            //    int adult = Convert.ToInt32(row["Adult"]);
-            //    int child = Convert.ToInt32(row["Child"]);
-
-            //    row["PAX"] = adult + child;
-            //}
-
 
         }
 
