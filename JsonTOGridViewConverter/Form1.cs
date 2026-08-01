@@ -41,9 +41,7 @@ namespace JsonTOGridViewConverter
                         GridView grid = new GridView(jsonData);
 
                         grid.Show();
-
-                        this.Hide();
-                    }
+                                           }
                 }
             }
             catch (Exception ex)

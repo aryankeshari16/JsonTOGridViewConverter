@@ -191,6 +191,7 @@ namespace JsonTOGridViewConverter
 
             CountRecordsLbl.Text =
                 $"[ {count} Record(s) Found. ]";
+            
         }
 
         private void Searchbtn_Click(object sender, EventArgs e)
