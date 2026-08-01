@@ -67,6 +67,7 @@
             this.paxTextBox = new System.Windows.Forms.TextBox();
             this.export_to_excel = new System.Windows.Forms.Button();
             this.sectorComboBox = new Hrs_Control.HrsComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -475,11 +476,21 @@
             this.sectorComboBox.Size = new System.Drawing.Size(200, 24);
             this.sectorComboBox.TabIndex = 647;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(867, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 648;
+            this.label1.Text = "label1";
+            // 
             // GridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1704, 845);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.sectorComboBox);
             this.Controls.Add(this.export_to_excel);
             this.Controls.Add(this.pax_label);
@@ -552,5 +563,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ErrorMessage;
         private System.Windows.Forms.Button export_to_excel;
         private Hrs_Control.HrsComboBox sectorComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }
