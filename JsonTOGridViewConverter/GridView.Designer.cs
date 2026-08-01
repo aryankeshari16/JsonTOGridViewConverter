@@ -29,25 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hrsPanelBox1 = new Hrs_Control.HrsPanelBox();
-            this.TravelDate_To = new System.Windows.Forms.DateTimePicker();
-            this.TravelDate_From = new System.Windows.Forms.DateTimePicker();
-            this.travel_date_label = new System.Windows.Forms.Label();
-            this.entrydate_to = new System.Windows.Forms.DateTimePicker();
-            this.EntryDate_From = new System.Windows.Forms.DateTimePicker();
-            this.entrydate_label = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.noneRadioButton1 = new System.Windows.Forms.RadioButton();
-            this.falseRadioButton1 = new System.Windows.Forms.RadioButton();
-            this.trueRadioButton1 = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.accIdtextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.sectorComboBox = new Hrs_Control.HrsComboBox();
-            this.Searchbtn = new System.Windows.Forms.Button();
-            this.CountRecordsLbl = new System.Windows.Forms.Label();
-            this.pax_label = new System.Windows.Forms.Label();
-            this.paxTextBox = new System.Windows.Forms.TextBox();
             this.EventType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EntryDateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TraceId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +47,26 @@
             this.Device = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Success = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ErrorMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hrsPanelBox1 = new Hrs_Control.HrsPanelBox();
+            this.TravelDate_To = new System.Windows.Forms.DateTimePicker();
+            this.TravelDate_From = new System.Windows.Forms.DateTimePicker();
+            this.travel_date_label = new System.Windows.Forms.Label();
+            this.entrydate_to = new System.Windows.Forms.DateTimePicker();
+            this.EntryDate_From = new System.Windows.Forms.DateTimePicker();
+            this.entrydate_label = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.noneRadioButton1 = new System.Windows.Forms.RadioButton();
+            this.falseRadioButton1 = new System.Windows.Forms.RadioButton();
+            this.trueRadioButton1 = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.accIdtextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Searchbtn = new System.Windows.Forms.Button();
+            this.CountRecordsLbl = new System.Windows.Forms.Label();
+            this.pax_label = new System.Windows.Forms.Label();
+            this.paxTextBox = new System.Windows.Forms.TextBox();
             this.export_to_excel = new System.Windows.Forms.Button();
+            this.sectorComboBox = new Hrs_Control.HrsComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -108,6 +109,156 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1679, 588);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // EventType
+            // 
+            this.EventType.DataPropertyName = "EventType";
+            this.EventType.HeaderText = "EventType";
+            this.EventType.MinimumWidth = 6;
+            this.EventType.Name = "EventType";
+            this.EventType.ReadOnly = true;
+            this.EventType.Visible = false;
+            // 
+            // EntryDateTime
+            // 
+            this.EntryDateTime.DataPropertyName = "EventTimeUtc";
+            this.EntryDateTime.HeaderText = "EntryDateTime";
+            this.EntryDateTime.MinimumWidth = 6;
+            this.EntryDateTime.Name = "EntryDateTime";
+            this.EntryDateTime.ReadOnly = true;
+            // 
+            // TraceId
+            // 
+            this.TraceId.DataPropertyName = "TraceId";
+            this.TraceId.HeaderText = "TraceId";
+            this.TraceId.MinimumWidth = 6;
+            this.TraceId.Name = "TraceId";
+            this.TraceId.ReadOnly = true;
+            this.TraceId.Visible = false;
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "UserName";
+            this.UserName.MinimumWidth = 6;
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            // 
+            // AccountId
+            // 
+            this.AccountId.DataPropertyName = "AccountId";
+            this.AccountId.HeaderText = "AccountId";
+            this.AccountId.MinimumWidth = 6;
+            this.AccountId.Name = "AccountId";
+            this.AccountId.ReadOnly = true;
+            // 
+            // ApiName
+            // 
+            this.ApiName.DataPropertyName = "ApiName";
+            this.ApiName.HeaderText = "ApiName";
+            this.ApiName.MinimumWidth = 6;
+            this.ApiName.Name = "ApiName";
+            this.ApiName.ReadOnly = true;
+            // 
+            // Origin
+            // 
+            this.Origin.DataPropertyName = "Origin";
+            this.Origin.HeaderText = "Origin";
+            this.Origin.MinimumWidth = 6;
+            this.Origin.Name = "Origin";
+            this.Origin.ReadOnly = true;
+            // 
+            // Destination
+            // 
+            this.Destination.DataPropertyName = "Destination";
+            this.Destination.HeaderText = "Destination";
+            this.Destination.MinimumWidth = 6;
+            this.Destination.Name = "Destination";
+            this.Destination.ReadOnly = true;
+            // 
+            // TravelDate
+            // 
+            this.TravelDate.DataPropertyName = "JourneyDate";
+            this.TravelDate.HeaderText = "TravelDate";
+            this.TravelDate.MinimumWidth = 6;
+            this.TravelDate.Name = "TravelDate";
+            this.TravelDate.ReadOnly = true;
+            // 
+            // Adult
+            // 
+            this.Adult.DataPropertyName = "Adult";
+            this.Adult.HeaderText = "Adult";
+            this.Adult.MinimumWidth = 6;
+            this.Adult.Name = "Adult";
+            this.Adult.ReadOnly = true;
+            // 
+            // Child
+            // 
+            this.Child.DataPropertyName = "Child";
+            this.Child.HeaderText = "Child";
+            this.Child.MinimumWidth = 6;
+            this.Child.Name = "Child";
+            this.Child.ReadOnly = true;
+            // 
+            // Infant
+            // 
+            this.Infant.DataPropertyName = "Infant";
+            this.Infant.HeaderText = "Infant";
+            this.Infant.MinimumWidth = 6;
+            this.Infant.Name = "Infant";
+            this.Infant.ReadOnly = true;
+            this.Infant.Visible = false;
+            // 
+            // ResultCount
+            // 
+            this.ResultCount.DataPropertyName = "ResultCount";
+            this.ResultCount.HeaderText = "ResultCount";
+            this.ResultCount.MinimumWidth = 6;
+            this.ResultCount.Name = "ResultCount";
+            this.ResultCount.ReadOnly = true;
+            // 
+            // ResponseTimeMs
+            // 
+            this.ResponseTimeMs.DataPropertyName = "ResponseTimeMs";
+            this.ResponseTimeMs.HeaderText = "ResponseTimeMs";
+            this.ResponseTimeMs.MinimumWidth = 6;
+            this.ResponseTimeMs.Name = "ResponseTimeMs";
+            this.ResponseTimeMs.ReadOnly = true;
+            this.ResponseTimeMs.Visible = false;
+            // 
+            // ClientIP
+            // 
+            this.ClientIP.DataPropertyName = "ClientIP";
+            this.ClientIP.HeaderText = "ClientIP";
+            this.ClientIP.MinimumWidth = 6;
+            this.ClientIP.Name = "ClientIP";
+            this.ClientIP.ReadOnly = true;
+            this.ClientIP.Visible = false;
+            // 
+            // Device
+            // 
+            this.Device.DataPropertyName = "Device";
+            this.Device.HeaderText = "Device";
+            this.Device.MinimumWidth = 6;
+            this.Device.Name = "Device";
+            this.Device.ReadOnly = true;
+            this.Device.Visible = false;
+            // 
+            // Success
+            // 
+            this.Success.DataPropertyName = "Success";
+            this.Success.HeaderText = "Success";
+            this.Success.MinimumWidth = 6;
+            this.Success.Name = "Success";
+            this.Success.ReadOnly = true;
+            // 
+            // ErrorMessage
+            // 
+            this.ErrorMessage.DataPropertyName = "ErrorMessage";
+            this.ErrorMessage.HeaderText = "ErrorMessage";
+            this.ErrorMessage.MinimumWidth = 6;
+            this.ErrorMessage.Name = "ErrorMessage";
+            this.ErrorMessage.ReadOnly = true;
             // 
             // hrsPanelBox1
             // 
@@ -259,14 +410,6 @@
             this.label3.TabIndex = 639;
             this.label3.Text = "Sector";
             // 
-            // sectorComboBox
-            // 
-            this.sectorComboBox.FormattingEnabled = true;
-            this.sectorComboBox.Location = new System.Drawing.Point(142, 137);
-            this.sectorComboBox.Name = "sectorComboBox";
-            this.sectorComboBox.Size = new System.Drawing.Size(200, 24);
-            this.sectorComboBox.TabIndex = 641;
-            // 
             // Searchbtn
             // 
             this.Searchbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -308,174 +451,6 @@
             this.paxTextBox.TabIndex = 640;
             this.paxTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paxTextBox_KeyPress);
             // 
-            // EventType
-            // 
-            this.EventType.DataPropertyName = "EventType";
-            this.EventType.HeaderText = "EventType";
-            this.EventType.MinimumWidth = 6;
-            this.EventType.Name = "EventType";
-            this.EventType.ReadOnly = true;
-            this.EventType.Visible = false;
-            this.EventType.Width = 125;
-            // 
-            // EntryDateTime
-            // 
-            this.EntryDateTime.DataPropertyName = "EventTimeUtc";
-            this.EntryDateTime.HeaderText = "EntryDateTime";
-            this.EntryDateTime.MinimumWidth = 6;
-            this.EntryDateTime.Name = "EntryDateTime";
-            this.EntryDateTime.ReadOnly = true;
-            this.EntryDateTime.Width = 125;
-            // 
-            // TraceId
-            // 
-            this.TraceId.DataPropertyName = "TraceId";
-            this.TraceId.HeaderText = "TraceId";
-            this.TraceId.MinimumWidth = 6;
-            this.TraceId.Name = "TraceId";
-            this.TraceId.ReadOnly = true;
-            this.TraceId.Visible = false;
-            this.TraceId.Width = 125;
-            // 
-            // UserName
-            // 
-            this.UserName.DataPropertyName = "UserName";
-            this.UserName.HeaderText = "UserName";
-            this.UserName.MinimumWidth = 6;
-            this.UserName.Name = "UserName";
-            this.UserName.ReadOnly = true;
-            this.UserName.Width = 125;
-            // 
-            // AccountId
-            // 
-            this.AccountId.DataPropertyName = "AccountId";
-            this.AccountId.HeaderText = "AccountId";
-            this.AccountId.MinimumWidth = 6;
-            this.AccountId.Name = "AccountId";
-            this.AccountId.ReadOnly = true;
-            this.AccountId.Width = 125;
-            // 
-            // ApiName
-            // 
-            this.ApiName.DataPropertyName = "ApiName";
-            this.ApiName.HeaderText = "ApiName";
-            this.ApiName.MinimumWidth = 6;
-            this.ApiName.Name = "ApiName";
-            this.ApiName.ReadOnly = true;
-            this.ApiName.Width = 125;
-            // 
-            // Origin
-            // 
-            this.Origin.DataPropertyName = "Origin";
-            this.Origin.HeaderText = "Origin";
-            this.Origin.MinimumWidth = 6;
-            this.Origin.Name = "Origin";
-            this.Origin.ReadOnly = true;
-            this.Origin.Width = 125;
-            // 
-            // Destination
-            // 
-            this.Destination.DataPropertyName = "Destination";
-            this.Destination.HeaderText = "Destination";
-            this.Destination.MinimumWidth = 6;
-            this.Destination.Name = "Destination";
-            this.Destination.ReadOnly = true;
-            this.Destination.Width = 125;
-            // 
-            // TravelDate
-            // 
-            this.TravelDate.DataPropertyName = "JourneyDate";
-            this.TravelDate.HeaderText = "TravelDate";
-            this.TravelDate.MinimumWidth = 6;
-            this.TravelDate.Name = "TravelDate";
-            this.TravelDate.ReadOnly = true;
-            this.TravelDate.Width = 125;
-            // 
-            // Adult
-            // 
-            this.Adult.DataPropertyName = "Adult";
-            this.Adult.HeaderText = "Adult";
-            this.Adult.MinimumWidth = 6;
-            this.Adult.Name = "Adult";
-            this.Adult.ReadOnly = true;
-            this.Adult.Width = 125;
-            // 
-            // Child
-            // 
-            this.Child.DataPropertyName = "Child";
-            this.Child.HeaderText = "Child";
-            this.Child.MinimumWidth = 6;
-            this.Child.Name = "Child";
-            this.Child.ReadOnly = true;
-            this.Child.Width = 125;
-            // 
-            // Infant
-            // 
-            this.Infant.DataPropertyName = "Infant";
-            this.Infant.HeaderText = "Infant";
-            this.Infant.MinimumWidth = 6;
-            this.Infant.Name = "Infant";
-            this.Infant.ReadOnly = true;
-            this.Infant.Visible = false;
-            this.Infant.Width = 125;
-            // 
-            // ResultCount
-            // 
-            this.ResultCount.DataPropertyName = "ResultCount";
-            this.ResultCount.HeaderText = "ResultCount";
-            this.ResultCount.MinimumWidth = 6;
-            this.ResultCount.Name = "ResultCount";
-            this.ResultCount.ReadOnly = true;
-            this.ResultCount.Width = 125;
-            // 
-            // ResponseTimeMs
-            // 
-            this.ResponseTimeMs.DataPropertyName = "ResponseTimeMs";
-            this.ResponseTimeMs.HeaderText = "ResponseTimeMs";
-            this.ResponseTimeMs.MinimumWidth = 6;
-            this.ResponseTimeMs.Name = "ResponseTimeMs";
-            this.ResponseTimeMs.ReadOnly = true;
-            this.ResponseTimeMs.Visible = false;
-            this.ResponseTimeMs.Width = 125;
-            // 
-            // ClientIP
-            // 
-            this.ClientIP.DataPropertyName = "ClientIP";
-            this.ClientIP.HeaderText = "ClientIP";
-            this.ClientIP.MinimumWidth = 6;
-            this.ClientIP.Name = "ClientIP";
-            this.ClientIP.ReadOnly = true;
-            this.ClientIP.Visible = false;
-            this.ClientIP.Width = 125;
-            // 
-            // Device
-            // 
-            this.Device.DataPropertyName = "Device";
-            this.Device.HeaderText = "Device";
-            this.Device.MinimumWidth = 6;
-            this.Device.Name = "Device";
-            this.Device.ReadOnly = true;
-            this.Device.Visible = false;
-            this.Device.Width = 125;
-            // 
-            // Success
-            // 
-            this.Success.DataPropertyName = "Success";
-            this.Success.HeaderText = "Success";
-            this.Success.MinimumWidth = 6;
-            this.Success.Name = "Success";
-            this.Success.ReadOnly = true;
-            this.Success.Width = 125;
-            // 
-            // ErrorMessage
-            // 
-            this.ErrorMessage.DataPropertyName = "ErrorMessage";
-            this.ErrorMessage.HeaderText = "ErrorMessage";
-            this.ErrorMessage.MinimumWidth = 6;
-            this.ErrorMessage.Name = "ErrorMessage";
-            this.ErrorMessage.ReadOnly = true;
-            this.ErrorMessage.Width = 125;
-            // 
             // export_to_excel
             // 
             this.export_to_excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -490,16 +465,26 @@
             this.export_to_excel.UseVisualStyleBackColor = false;
             this.export_to_excel.Click += new System.EventHandler(this.export_to_excel_Click);
             // 
+            // sectorComboBox
+            // 
+            this.sectorComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.sectorComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.sectorComboBox.FormattingEnabled = true;
+            this.sectorComboBox.Location = new System.Drawing.Point(142, 137);
+            this.sectorComboBox.Name = "sectorComboBox";
+            this.sectorComboBox.Size = new System.Drawing.Size(200, 24);
+            this.sectorComboBox.TabIndex = 647;
+            // 
             // GridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1704, 845);
+            this.Controls.Add(this.sectorComboBox);
             this.Controls.Add(this.export_to_excel);
             this.Controls.Add(this.pax_label);
             this.Controls.Add(this.CountRecordsLbl);
             this.Controls.Add(this.Searchbtn);
-            this.Controls.Add(this.sectorComboBox);
             this.Controls.Add(this.paxTextBox);
             this.Controls.Add(this.accIdtextBox);
             this.Controls.Add(this.label3);
@@ -515,7 +500,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "GridView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GridView";
+            this.Text = "SearchView";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GridView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -543,7 +528,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox accIdtextBox;
         private System.Windows.Forms.Label label3;
-        private Hrs_Control.HrsComboBox sectorComboBox;
         private System.Windows.Forms.Button Searchbtn;
         private System.Windows.Forms.Label CountRecordsLbl;
         private System.Windows.Forms.Label pax_label;
@@ -567,5 +551,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Success;
         private System.Windows.Forms.DataGridViewTextBoxColumn ErrorMessage;
         private System.Windows.Forms.Button export_to_excel;
+        private Hrs_Control.HrsComboBox sectorComboBox;
     }
 }

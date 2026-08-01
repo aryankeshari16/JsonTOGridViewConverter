@@ -206,11 +206,14 @@ namespace JsonTOGridViewConverter
 
 
             // Sector Filter
-            string selectedSector = sectorComboBox.SelectedItem.ToString();
+
+            string selectedSector = sectorComboBox.SelectedItem?.ToString();
 
 
-            if (selectedSector != "All Sector")
+            if (!string.IsNullOrEmpty(selectedSector) &&
+                selectedSector != "All Sector")
             {
+
                 string[] sector = selectedSector.Split(
                     new string[] { " // " },
                     StringSplitOptions.None
@@ -310,7 +313,7 @@ namespace JsonTOGridViewConverter
             }
             if (int.TryParse(paxTextBox.Text, out int pax))
             {
-                filters.Add($"PAX >= {pax}");
+                filters.Add($"PAX = {pax}");
             }
 
             if (filters.Count > 0)
